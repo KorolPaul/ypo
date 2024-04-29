@@ -1,0 +1,31 @@
+.contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    @include desktop {
+        flex-direction: row;
+        gap: 170px;
+    }
+
+    &_title {
+        font-size: 20px;
+        display: block;
+        margin-bottom: 32px;
+        @include tablet {
+            margin-bottom: 40px;
+        }
+    }
+
+    &_link {
+        font-size: 25px;
+        font-style: normal;
+        line-height: 1;
+        letter-spacing: -1.9px;
+        display: block;
+        margin-bottom: 16px;
+        color: $cLight;
+        @include media(512px) {
+            font-size: 38px;
+        }
+    }
+}
