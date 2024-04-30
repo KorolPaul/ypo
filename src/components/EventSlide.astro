@@ -1,0 +1,23 @@
+---
+export interface Props {
+    date: string;
+    title: string;
+    label: string;
+    subtitle: string;
+    src: string;
+    type: string;
+}
+
+const { title, date, label, subtitle, src, type } = Astro.props;
+---
+
+<div class="event-slide">
+    <span class="event-slide_label">{label}</span>
+    <span class="event-slide_date">{date}</span>
+    <div class="event-slide_content">
+        <span class="event-slide_type">{type}</span>
+        <span class="event-slide_title">{title}</span>
+        <span class="event-slide_subtitle">{subtitle}</span>
+    </div>
+    <img class="event-slide_image" src={src} alt="" />
+</div>

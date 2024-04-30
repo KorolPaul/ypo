@@ -1,0 +1,55 @@
+.ticker-big {
+    background: linear-gradient(90deg, #B9AFF5 1.12%, #D091A8 4.75%, #FF8CB7 12.31%, #BFB7CE 20.5%, #C9C294 37%, #AEFDC9 58%, #A4F9C1 75%, #FFC7E9 100%);
+    overflow: hidden;
+
+    &_string {
+        line-height: 214px;
+        height: 214px;
+        white-space: nowrap;
+        font-size: 84px;
+        font-weight: 900;
+        display: flex;
+        text-transform: uppercase;
+    }
+
+    &_string-main {
+        animation: big-string 26s linear infinite;
+    }
+
+    &_string-dublicate {
+        animation: big-string-dublicate 26s linear infinite;
+    }
+
+    .stroke-text {
+        color: transparent;
+        -webkit-text-stroke-color: $color;
+    }
+}
+
+@keyframes big-string {
+    0% {
+        transform: translate(0)
+    }
+
+    50% {
+        transform: translate(-100%)
+    }
+
+    50.01% {
+        transform: translate(100%)
+    }
+
+    100% {
+        transform: translate(0)
+    }
+}
+
+@keyframes big-string-dublicate {
+    0% {
+        transform: translate(0)
+    }
+
+    100% {
+        transform: translate(-200%)
+    }
+}

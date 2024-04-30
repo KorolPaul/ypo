@@ -1,0 +1,18 @@
+---
+export interface Props {
+    title?: string;
+}
+
+const { title } = Astro.props;
+---
+
+<div class="ticker-big">
+    <div class="ticker-big_string">
+        <div class="ticker-big_string-main">
+            <slot />
+        </div>
+        <div class="ticker-big_string-dublicate">
+            <slot />
+        </div>
+    </div>
+</div>

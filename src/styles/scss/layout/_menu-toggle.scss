@@ -16,7 +16,10 @@
                 .2s $easingSmooth color,
                 .2s $easingSmooth border-color,
                 .2s $easingSmooth transform;
-
+    @include desktop {
+        display: none;
+    }
+    
     &_lines {
         display: flex;
         flex-direction: column;
@@ -29,7 +32,5 @@
         background-color: $cLight;
     }
 
-    @include desktop {
-        display: none;
-    }
+
 }

@@ -1,0 +1,73 @@
+.ticker {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    overflow: hidden;
+    @include desktop {
+        gap: 30px;
+    }
+
+    &_logo-wrapper {
+        padding: 0 14px;
+        background-color: $color;
+        flex-shrink: 0;
+        position: relative;
+        z-index: 2;
+        @include desktop {
+            padding: 16px 24px;
+        }
+    }
+
+    &_logo {
+        width: 120px;
+        display: block;
+        @include desktop {
+            width: 170px;
+        }
+    }
+
+    &_string {
+        flex-grow: 10;
+        white-space: nowrap;
+        font-size: 24px;
+        font-weight: 500;
+        letter-spacing: -0.48px;
+        display: flex;
+    }
+
+    &_string-main {
+        animation: string 66s linear infinite;
+    }
+
+    &_string-dublicate {
+        animation: string-dublicate 66s linear infinite;
+    }
+}
+
+@keyframes string {
+    0% {
+        transform: translate(0)
+    }
+
+    50% {
+        transform: translate(-100%)
+    }
+
+    50.01% {
+        transform: translate(100%)
+    }
+
+    100% {
+        transform: translate(0)
+    }
+}
+
+@keyframes string-dublicate {
+    0% {
+        transform: translate(0)
+    }
+
+    100% {
+        transform: translate(-200%)
+    }
+}

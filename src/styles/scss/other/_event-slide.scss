@@ -1,0 +1,23 @@
+.event-slide {
+    border-radius: 18px;
+    position: relative;
+    overflow: hidden;
+
+    &_date {
+        font-size: 20px;
+        font-weight: 700;
+        position: absolute;
+        left: 16px;
+        top: 37px;
+        text-transform: uppercase;
+        @include desktop {
+            font-size: 24px;
+            top: 60px;
+            left: 42px;
+        }
+    }
+
+    &_content {
+
+    }
+}
