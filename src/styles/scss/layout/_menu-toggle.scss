@@ -1,0 +1,35 @@
+.menu-toggle {
+    @include button-reset;
+    background-color: $color;
+    font-size: 12px;
+    line-height: 52px;
+    height: 40px;
+    font-weight: 500;
+    padding: 7px 7px 7px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 26px;
+    border-radius: 6px;
+    z-index: 10;
+    transition: .2s $easingSmooth opacity,
+                .2s $easingSmooth color,
+                .2s $easingSmooth border-color,
+                .2s $easingSmooth transform;
+
+    &_lines {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        width: 30px;
+    }
+
+    &_line {
+        height: 2px;
+        background-color: $cLight;
+    }
+
+    @include desktop {
+        display: none;
+    }
+}

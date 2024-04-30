@@ -1,0 +1,41 @@
+<header class="header">
+    <div class="header_holder">
+        <a href="/" class="logo">
+            <img class="menu_logo-image" src="/img/logo.svg" alt="" />
+        </a>
+        <div class="menu">
+            <a href="/" class="menu_logo">
+                <img class="menu_logo-image" src="/img/logo.svg" alt="" />
+            </a>
+            <nav class="menu_links">
+                <a href="/team" class="menu_link">Events</a>
+                <a href="/culture" class="menu_link">Your Challenge</a>
+                <a href="/contact" class="menu_link">Mission</a>
+                <a href="/contact" class="menu_link menu_link__soon">Global Impact</a>
+            </nav>
+        </div>
+        <button class="menu-toggle">
+            <span>MENU</span>
+            <div class="menu-toggle_lines">
+                <div class="menu-toggle_line"></div>
+                <div class="menu-toggle_line"></div>
+                <div class="menu-toggle_line"></div>
+            </div>
+        </button>
+    </div>
+</header>
+
+<script>
+    const menuToggleElement = document.querySelector(".menu-toggle");
+    if (menuToggleElement) {
+        menuToggleElement.addEventListener("click", (e: Event) => {
+            if (document.body.classList.contains("menu-opened")) {
+                e.target.innerText = "Menu";
+            } else {
+                e.target.innerText = "Close";
+            }
+
+            document.body.classList.toggle("menu-opened");
+        });
+    }
+</script>

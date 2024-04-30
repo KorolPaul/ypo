@@ -1,0 +1,89 @@
+---
+const { opened = false } = Astro.props;
+---
+
+
+<div class:list={['popup', { 'opened': opened }]}>
+    <button class="popup_close"></button>
+    <div class="popup_content">
+        <slot />
+    </div>
+</div>
+
+<style lang="scss" is:global>
+    @import "~/styles/scss/_const.scss";
+    @import "~/styles/scss/_mixins.scss";
+
+    .popup {
+        background: $color;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 96px 24px 24px;
+        box-sizing: border-box;
+        z-index: 20;
+        pointer-events: none;
+        opacity: 0;
+        transition: 0.3s $easingSmooth transform, 0.3s $easingSmooth opacity;
+        @include desktop {
+            padding: 64px 96px;
+        }
+
+        &.opened,
+        .popup-opened & {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        &_close {
+            background: url(#{$img}/close.svg) no-repeat center center / contain;
+            border: none;
+            height: 40px;
+            width: 40px;
+            position: absolute;
+            top: 32px;
+            right: 24px;
+            z-index: 3;
+            min-width: 0;
+            padding: 0;
+            transition: 0.2s $easing opacity;
+
+            &:hover {
+                opacity: 0.6;
+            }
+            &:active {
+                opacity: 1;
+            }
+        }
+
+        &_content {
+            overflow: auto;
+            max-width: 1600px;
+            margin: auto;
+        }
+
+        video {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+    }
+</style>
+
+<script>
+    document.querySelectorAll('.popup_close').forEach(el => el.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        document.querySelectorAll('.popup video').forEach(video => {
+            video.pause();
+            video.currentTime = 0;
+        });
+
+        document.querySelectorAll('.popup-opened').forEach(wrapper => {
+            wrapper.classList.remove('popup-opened');
+        });
+
+    }))
+</script>

@@ -1,0 +1,6 @@
+.logo {
+    width: 169px;
+    @include desktop {
+        width: 318px;
+    }
+}

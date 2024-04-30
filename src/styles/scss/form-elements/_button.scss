@@ -1,0 +1,65 @@
+@mixin button {
+    display: inline-block;
+    background: $color;
+    box-sizing: border-box;
+    cursor: pointer;
+    color: $cLight;
+    border: none;
+    border-radius: 16px;
+    white-space: nowrap;
+    text-align: center;
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 900;
+    height: 85px;
+    line-height: 95px;
+    letter-spacing: -0.68px;
+    text-transform: uppercase;
+    padding: 0 20px;
+    font-family: $font-family;
+    min-width: 250px;
+    width: 100%;
+    position: relative;
+    transition: .3s $easing background,
+                .2s $easing color,
+                .2s $easing border-color;
+    @include tablet {
+        width: auto;
+        height: 117px;
+        line-height: 127px;
+    }
+
+    &:hover {
+        // background: linear-gradient(45deg, #141418 13.06%, #787891 99.63%);
+        color: $cLight;
+    }
+
+    &:active {
+        // background: $color;
+        color: $cLight;
+    }
+
+    &:disabled {
+        pointer-events: none;
+        opacity: .6;
+    }
+
+    &::before {
+        content: '';
+        border-radius: 16px;
+        background: linear-gradient(180deg, #A4F9C1 0%, #B087CF 43.5%, #FFC7E9 76.5%, #B9AFF5 100%);
+        position: absolute;
+        top: -8px;
+        left: -8px;
+        right: -8px;
+        bottom: -8px;
+        z-index: -1;
+    }
+}
+
+.button,
+button,
+input[type="button"] {
+    @include button;
+}
+
