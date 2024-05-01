@@ -1,0 +1,24 @@
+---
+export interface Props {
+    date: string;
+    title: string;
+    label?: string;
+    src: string;
+    tags: Array<string>;
+}
+
+const { title, date, label, tags, src } = Astro.props;
+---
+
+<div class="event">
+    {label && <span class="event_label">{label}</span>}
+    <span class="event_date">{date}</span>
+    <div class="event_content">
+        <span class="event_title">{title}</span>
+        <div class="event_tags">
+            {tags.map((item) => <span class="event_tag">{item}</span>)}
+        </div>
+        <span class="event_arrow">SEE DETAILS</span>
+    </div>
+    <img class="event_image" src={src} alt="" />
+</div>

@@ -1,0 +1,113 @@
+.events {
+    &_list {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        @include desktop {
+            gap: 20px;
+        }
+    }
+}
+
+.event {
+    border-radius: 18px;
+    position: relative;
+    overflow: hidden;
+
+    &_date {
+        font-size: 20px;
+        font-weight: 700;
+        position: absolute;
+        left: 16px;
+        top: 37px;
+        text-transform: uppercase;
+        @include desktop {
+            font-size: 24px;
+            top: 60px;
+            left: 42px;
+        }
+    }
+
+    &_content {
+        position: absolute;
+        left: 18px;
+        right: 18px;
+        bottom: 20px;
+        text-transform: uppercase;
+        color: $cLight;
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        @include desktop {
+            flex-direction: row;
+            gap: 50px;
+            justify-content: space-between;
+            align-items: flex-end;
+            left: 42px;
+            right: 42px;
+            bottom: 50px;
+        }
+    }
+
+    &_tags {
+        display: flex;
+        gap: 6px;
+        @include desktop {
+            gap: 10px;
+        }
+    }
+
+    &_tag {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 97%;
+        border-radius: 8px;
+        background: rgba(0, 0, 0, 0.37);
+        backdrop-filter: blur(24px);
+        padding: 6px 16px;
+    }
+
+    &_title {
+        font-size: 18px;
+        font-weight: 900;
+        line-height: 94%;
+        display: block;
+        margin: 24px 0 16px;
+        max-width: 75%;
+        @include desktop {
+            max-width: 30%;
+            font-size: 34px;
+        }
+    }
+
+    &_arrow {
+        display: none;
+        position: relative;
+        @include desktop {
+            display: block;
+            font-size: 18px;
+            font-weight: 700;
+            height: 64px;
+            line-height: 64px;
+            border-radius: 6px;
+            padding: 0 54px 0 24px;
+            background-color: $color;
+        }
+
+        &::after {
+            content: '';
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            top: 20px;
+            right: 18px;
+            background: url(#{$img}/arrow-black.svg) no-repeat right center / 20px 20px;
+            filter: brightness(10);
+            transition: .2s $easing filter;
+        }
+    }
+
+    &_label {
+        position: absolute;
+    }
+}

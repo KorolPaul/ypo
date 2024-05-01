@@ -2,6 +2,8 @@
 import Layout from "../layouts/Layout.astro";
 import Ticker from "../components/Ticker.astro";
 import TickerBig from "../components/TickerBig.astro";
+import EventsSlider from "~/components/EventsSlider.astro";
+import Events from "~/components/Events.astro";
 ---
 
 <Layout title="Welcome to Astro.">
@@ -50,9 +52,8 @@ import TickerBig from "../components/TickerBig.astro";
                     Click & <span class="stroke-text">WOW</span>
                 </button>
             </div>
-
         </div>
-        
+
         <TickerBig>
             Icon
             <span class="stroke-text">People</span>
@@ -60,5 +61,13 @@ import TickerBig from "../components/TickerBig.astro";
             <span class="stroke-text">Places</span>
             of Miami
         </TickerBig>
+
+        <EventsSlider title="UPCOMING EVENTS" />
+    </section>
+
+    <section>
+        <div class="section_content">
+            <Events title="List EVENTS" />
+        </div>
     </section>
 </Layout>
