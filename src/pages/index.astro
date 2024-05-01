@@ -4,6 +4,8 @@ import Ticker from "../components/Ticker.astro";
 import TickerBig from "../components/TickerBig.astro";
 import EventsSlider from "~/components/EventsSlider.astro";
 import Events from "~/components/Events.astro";
+import Stories from "~/components/Stories.astro";
+import Facts from "~/components/Facts.astro";
 ---
 
 <Layout title="Welcome to Astro.">
@@ -68,6 +70,14 @@ import Events from "~/components/Events.astro";
     <section>
         <div class="section_content">
             <Events title="List EVENTS" />
+
+            <Stories title="Last Stories" />
+
+            <Facts title="QUICK FACTS..." />
         </div>
+        
+        <TickerBig>
+            Challenge <span class="stroke-text">Everything</span> Win Everyday Challenge Everything. <span class="stroke-text">Win Everyday</span>
+        </TickerBig>
     </section>
 </Layout>

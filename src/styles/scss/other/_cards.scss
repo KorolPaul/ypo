@@ -1,0 +1,41 @@
+.card {
+    border-radius: 16px;
+    border: 1px solid $color;
+    padding: 44px 20px;
+
+    &_title {
+        font-size: 26px;
+        font-weight: 700;
+        line-height: 1.06;
+        letter-spacing: -0.52px;
+        text-transform: uppercase;
+        display: block;
+        white-space: nowrap;
+    }
+
+    &_image-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 269px;
+        margin: 0 0 14px;
+        border: 1px solid $color;
+    }
+
+    &_image {
+        max-height: 90%;
+    }
+
+    &_text {
+        display: block;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.5;
+        letter-spacing: -0.48px;
+        text-transform: uppercase;
+        @include tablet {
+            font-size: 24px;
+        }
+    }
+}
