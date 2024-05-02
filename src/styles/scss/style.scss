@@ -31,6 +31,8 @@
 @import "layout/preloader";
 @import "layout/section";
 @import "layout/stroke-text";
+@import "layout/label";
+@import "layout/button-link";
 
 /* other */
 @import "other/ticker";
@@ -43,6 +45,10 @@
 @import "other/stories";
 @import "other/cards";
 @import "other/facts";
+@import "other/challenges";
+@import "other/event-page";
+@import "other/program";
+@import "other/schedule";
 
 /* plugins */
 @import "plugins/swiper";

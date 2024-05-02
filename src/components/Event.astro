@@ -1,4 +1,6 @@
 ---
+import Label from "~/components/Label.astro";
+
 export interface Props {
     date: string;
     title: string;
@@ -11,7 +13,7 @@ const { title, date, label, tags, src } = Astro.props;
 ---
 
 <div class="event">
-    {label && <span class="event_label">{label}</span>}
+    {label && <Label>{label}</Label>}
     <span class="event_date">{date}</span>
     <div class="event_content">
         <span class="event_title">{title}</span>

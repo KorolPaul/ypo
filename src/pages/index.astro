@@ -6,23 +6,14 @@ import EventsSlider from "~/components/EventsSlider.astro";
 import Events from "~/components/Events.astro";
 import Stories from "~/components/Stories.astro";
 import Facts from "~/components/Facts.astro";
+import Challenges from "~/components/Challenges.astro";
 ---
 
 <Layout title="Welcome to Astro.">
     <section class="section">
         <div class="section_content">
             <h1>Your Gateway to Events, Speakers, and Challenges</h1>
-            <Ticker>
-                <strong>Sept 1, 2024</strong> — Ken Griffen /
-                <strong>oct 1, 2024</strong> — Greg Norman & Bubba Watson /
-                <strong>Nov 1, 2024</strong> — Andrea Kaplan /
-                <strong>Febr 1, 2025</strong> — Carlos de la Cruz & Stephen Davis /
-                <strong>Mar 1, 2025</strong> — Daniella Levine Cava /
-                <strong>APR 1, 2025</strong> — Members' homes /
-                <strong>APR 1, 2025</strong> — Costa Rica Ritz Carlton /
-                <strong>may 1, 2025</strong> — Alejandro Reynal & Barry Sternlicht /
-                <strong>jul 1, 2025</strong> — YPO's Worldwide Jet Trip
-            </Ticker>
+            <Ticker />
 
             <div class="stats">
                 <div class="stats_item">
@@ -79,5 +70,18 @@ import Facts from "~/components/Facts.astro";
         <TickerBig>
             Challenge <span class="stroke-text">Everything</span> Win Everyday Challenge Everything. <span class="stroke-text">Win Everyday</span>
         </TickerBig>
+    </section>
+
+    <section>
+        <Challenges title="Challenge Showcase" />
+    </section>
+
+    <section>
+        <div class="section_content">
+            <div class="about">
+                <h2>For more about us and our Leadership, visit our Mission page to dive deeper into our vision</h2>
+                <a href="#" class="about_link">Explore Our Mission & Leadership</a>
+            </div>
+        </div>
     </section>
 </Layout>

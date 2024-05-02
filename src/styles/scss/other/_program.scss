@@ -1,0 +1,130 @@
+.program {
+    max-width: 596px;
+    margin: auto;
+
+    &_description {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.34; /* 18.76px */
+        letter-spacing: -0.56px;
+        margin: 0 0 54px;
+        @include tablet {
+            font-size: 16px;
+            margin-bottom: 56px;
+            letter-spacing: -0.64px;
+        }
+    }
+
+    &_coordinator {
+        display: flex;
+        align-items: flex-start;
+        gap: 24px;
+        @include tablet {
+            gap: 50px;
+        }
+    }
+
+    &_coordinator-avatar {
+        border-radius: 8px;
+        border: 1px solid #000;
+        position: relative;
+        flex-shrink: 0;
+    }
+
+    &_coordinator-image {
+        width: 100%;
+        display: block;
+    }
+
+    &_coordinator-top-label {
+        position: absolute;
+        top: -19px;
+        left: -11px;
+        @include tablet {
+            top: -19px;
+            left: -30px;
+        }
+    }
+
+    &_coordinator-bottom-label {
+        position: absolute;
+        bottom: -19px;
+        left: 24px;
+        @include tablet {
+        }
+    }
+
+    &_coordinator-info {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        @include tablet {
+            gap: 26px;
+        }
+    }
+
+    &_coordinator-info-title {
+        font-size: 14px;
+        font-weight: 900;
+        line-height: 1.42; 
+        text-transform: uppercase;
+        margin: 0 0 8px;
+        display: block;
+        @include tablet {
+            font-size: 20px;
+        }
+    }
+
+    &_coordinator-info-value {
+        font-size: 12px;
+        font-weight: 400;
+        @include tablet {
+            font-size: 16px;
+        }
+
+        &[href] {
+            text-decoration: underline;
+        }
+    }
+
+    &_bottom {
+        padding: 56px 0 180px;
+        @include tablet {
+            padding-top: 66px;
+            border-top: 1px solid $color;
+        }
+    }
+
+    &_slogan {
+        display: flex;
+        gap: 20px;
+        align-items: flex-start;
+        @include tablet {
+            gap: 50px;
+        }
+    }
+
+    &_slogan-image {
+        width: 82px;
+        flex-shrink: 0;
+        @include tablet {
+            width: 126px;
+        }
+    }
+
+    &_slogan-title {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.25; /* 125% */
+        text-transform: uppercase;
+        @include tablet {
+            font-size: 20px;
+        }
+    }
+
+    &_buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+}

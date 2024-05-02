@@ -1,21 +1,29 @@
----
-export interface Props {
-    title?: string;
-}
-
-const { title } = Astro.props;
----
-
 <div class="ticker">
     <div class="ticker_logo-wrapper">
         <img class="ticker_logo" src="/img/iconic-blue.svg" alt="" />
     </div>
     <div class="ticker_string">
         <div class="ticker_string-main">
-            <slot />
+            <strong>Sept 1, 2024</strong> — Ken Griffen /
+            <strong>oct 1, 2024</strong> — Greg Norman & Bubba Watson /
+            <strong>Nov 1, 2024</strong> — Andrea Kaplan /
+            <strong>Febr 1, 2025</strong> — Carlos de la Cruz & Stephen Davis /
+            <strong>Mar 1, 2025</strong> — Daniella Levine Cava /
+            <strong>APR 1, 2025</strong> — Members' homes /
+            <strong>APR 1, 2025</strong> — Costa Rica Ritz Carlton /
+            <strong>may 1, 2025</strong> — Alejandro Reynal & Barry Sternlicht /
+            <strong>jul 1, 2025</strong> — YPO's Worldwide Jet Trip
         </div>
         <div class="ticker_string-dublicate">
-            <slot />
+            <strong>Sept 1, 2024</strong> — Ken Griffen /
+            <strong>oct 1, 2024</strong> — Greg Norman & Bubba Watson /
+            <strong>Nov 1, 2024</strong> — Andrea Kaplan /
+            <strong>Febr 1, 2025</strong> — Carlos de la Cruz & Stephen Davis /
+            <strong>Mar 1, 2025</strong> — Daniella Levine Cava /
+            <strong>APR 1, 2025</strong> — Members' homes /
+            <strong>APR 1, 2025</strong> — Costa Rica Ritz Carlton /
+            <strong>may 1, 2025</strong> — Alejandro Reynal & Barry Sternlicht /
+            <strong>jul 1, 2025</strong> — YPO's Worldwide Jet Trip
         </div>
     </div>
 </div>

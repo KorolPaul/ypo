@@ -1,4 +1,10 @@
 .section {
+    overflow: hidden;
+
+    &__beige {
+        background-color: #D5D3C6;
+    }
+
     &_content {
         @include layout;
     }

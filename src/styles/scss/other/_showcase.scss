@@ -5,6 +5,13 @@
         padding: 66px 0 260px;
     }
 
+    &__small-indent {
+        padding: 24px 0 65px;
+        @include desktop {
+            padding: 56px 0 110px;
+        }
+    }
+
     &_video-wrapper {
         border-radius: 16px;
         background-color: $color;
