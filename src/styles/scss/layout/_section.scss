@@ -1,8 +1,16 @@
 .section {
     overflow: hidden;
+    padding-bottom: 120px;
+    @include desktop {
+        padding-bottom: 220px;
+    }
 
     &__beige {
         background-color: #D5D3C6;
+    }
+
+    &__blue {
+        background-color: #CAD2F5;
     }
 
     &_content {

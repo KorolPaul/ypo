@@ -1,0 +1,83 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Ticker from "../components/Ticker.astro";
+import VideoCards from "../components/VideoCards.astro";
+
+---
+
+<Layout title="Family Flotilla Day">
+    <section class="section">
+        <div class="section_content">
+            <div class="mission">
+                <span class="mission_label">our mission</span>
+                <h1>Embrace Iconic Miami</h1>
+
+                <div class="mission_text">
+                    <p>
+                        Our event calendar celebrates Iconic Miami's vibrant culture and innovation. We connect leaders, innovators, and enthusiasts to exchange ideas and inspire each other. Each event showcases the unique charm of Miami, embodying our new slogan, "Unleash Miami's Magic." Join us to explore and be inspired by Miami's dynamic spirit.
+                    </p>
+                </div>
+            </div>
+
+            
+        </div>
+        <Ticker />
+    </section>
+
+    <section class="section section__blue">
+        <div class="section_content">
+            <VideoCards title="Introducing Your event project Leaders" />
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="section_content">
+            <div class="kpis">
+                <h2 class="kpis_title">Key Event KPIs</h2>
+                <span class="kpis_subtitle">Attendance Highlights</span>
+                <div class="kpis_table">
+                    <div class="kpis_cell">
+                        <span class="kpis_cell-title">Total Attendees:</span>
+                        <div class="kpis_cell-content">
+                            <img src="/img/kpi.svg" alt="" class="kpis_cell-image">
+                            <div class="kpis_cell-data">
+                                <span class="kpis_cell-data-value">100+</span>
+                                <span class="kpis_cell-data-title">Enthusiastic Participants</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="kpis_cell">
+                        <span class="kpis_cell-title">Energy Boost:</span>
+                        <div class="kpis_cell-content">
+                            <img src="/img/kpi.svg" alt="" class="kpis_cell-image">
+                            <div class="kpis_cell-data">
+                                <span class="kpis_cell-data-value">500%</span>
+                                <span class="kpis_cell-data-title">Participants Recharged and Revitalized</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="kpis_cell">
+                        <span class="kpis_cell-title">Idea Overload:</span>
+                        <div class="kpis_cell-content">
+                            <img src="/img/kpi.svg" alt="" class="kpis_cell-image">
+                            <div class="kpis_cell-data">
+                                <span class="kpis_cell-data-value">1,000+</span>
+                                <span class="kpis_cell-data-title">Ideas Exchanged</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="kpis_cell">
+                        <span class="kpis_cell-title">Feedback and Satisfaction:</span>
+                        <div class="kpis_cell-content">
+                            <img src="/img/kpi.svg" alt="" class="kpis_cell-image">
+                            <div class="kpis_cell-data">
+                                <span class="kpis_cell-data-value">4.9/5</span>
+                                <span class="kpis_cell-data-title">Heartfelt Rating</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</Layout>

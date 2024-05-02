@@ -19,6 +19,7 @@
         display: flex;
         align-items: flex-start;
         gap: 24px;
+        margin-bottom: 66px;
         @include tablet {
             gap: 50px;
         }
@@ -63,10 +64,15 @@
         }
     }
 
+    &_coordinator-info-item {
+        display: flex;
+        flex-direction: column;
+    }
+
     &_coordinator-info-title {
         font-size: 14px;
         font-weight: 900;
-        line-height: 1.42; 
+        line-height: 1; 
         text-transform: uppercase;
         margin: 0 0 8px;
         display: block;

@@ -1,0 +1,121 @@
+.kpis {
+    &_title {
+        padding: 0 0 0 56px;
+        position: relative;
+        font-size: 34px;
+        font-weight: 900;
+        line-height: 1;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        @include tablet {
+            font-size: 54px;
+            margin-bottom: 44px;
+            padding-left: 80px;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 26px;
+            width: 26px;
+            border-radius: 50%;
+            background-color: $color;
+            @include tablet {
+                height: 44px;
+                width: 44px;
+            }
+        }
+    }
+
+    &_subtitle {
+        padding: 0 0 0 56px;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 1.25;
+        text-transform: uppercase;
+        @include tablet {
+            padding-left: 80px;
+            font-size: 34px;
+        }
+    }
+
+    &_table {
+        text-transform: uppercase;
+        @include tablet {
+            display: grid;
+            grid-template-rows: auto;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    &_cell {
+        padding: 46px 0 24px;
+        border-top: 1px solid $color;
+        @include tablet {
+            padding: 100px 80px;
+        }
+
+        &:nth-child(1),
+        &:nth-child(2) {
+            border-top: none;
+        }
+
+        &:nth-child(2),
+        &:nth-child(4) {
+            border-left: 1px solid $color;
+        }
+    }
+
+    &_cell-title {
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 1.1;
+        display: block;
+        margin: 0 0 16px;
+        @include tablet {
+            font-size: 34px;
+            margin-bottom: 56px;
+        }
+    }
+
+    &_cell-content {
+        display: flex;
+        justify-content: space-between;
+        gap: 18px;
+        @include tablet {
+            gap: 50px;
+        }
+    }
+
+    &_cell-data {
+        @include tablet {
+            text-align: center;
+        }
+    }
+
+    &_cell-data-value {
+        font-size: 44px;
+        font-weight: 900;
+        line-height: 104%;
+        display: block;
+        margin: 0 0 14px;
+        @include tablet {
+            font-size: 54px;
+            margin-bottom: 18px;
+        }
+    }
+
+    &_cell-data-title {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.25;
+        letter-spacing: -0.64px;
+        display: block;
+        @include tablet {
+            font-size: 24px;
+        }
+    }
+}

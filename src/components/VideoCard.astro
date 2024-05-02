@@ -1,0 +1,17 @@
+---
+export interface Props {
+    src: string;
+    title: string;
+    subtitle: string;
+}
+
+const { src, title, subtitle } = Astro.props;
+---
+
+<div class="video-card">
+    <video src={src} class="video-card_video" />
+    <div class="video-card_content">
+        <span class="video-card_title">{title}</span>
+        <span class="video-card_subtitle">{subtitle}</span>
+    </div>
+</div>
