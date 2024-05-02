@@ -119,4 +119,18 @@
             height: 48px;
         }
     }
+
+    &_middle {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        @include tablet {
+            flex-direction: row;
+            padding: 0 0 56px;
+        }
+    }
+
+    &_player {
+        max-width: 660px;
+    }
 }
