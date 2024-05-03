@@ -22,6 +22,10 @@
     z-index: 1
 }
 
+.swiper-holder {
+    position: relative;
+}
+
 .swiper {
     margin-left: auto;
     margin-right: auto;
@@ -358,10 +362,15 @@
 
 .swiper-pagination {
     position: absolute;
-    text-align: center;
+    left: 0;
+    bottom: -55px;
+    text-align: left;
     transition: .3s opacity;
     transform: translate3d(0, 0, 0);
-    z-index: 10
+    z-index: 10;
+    @include desktop {
+        bottom: -80px;
+    }
 }
 
 .swiper-pagination.swiper-pagination-hidden {
@@ -373,8 +382,6 @@
     display: none !important
 }
 
-.swiper-horizontal>.swiper-pagination-bullets,
-.swiper-pagination-bullets.swiper-pagination-horizontal,
 .swiper-pagination-custom,
 .swiper-pagination-fraction {
     bottom: var(--swiper-pagination-bottom, 8px);

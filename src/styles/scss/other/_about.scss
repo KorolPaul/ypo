@@ -1,0 +1,31 @@
+.about {
+    padding: 110px 0 130px;
+    text-align: center;
+    @include desktop {
+        padding: 165px 0 215px;
+    }
+
+    h2 {
+        line-height: 1.08;
+        text-align: center;
+        margin: 0 0 36px;
+        @include desktop {
+            margin-bottom: 86px;
+            font-size: 54px;
+        }
+    }
+
+    &_link {
+        font-size: 16px;
+        line-height: 1.25;
+        letter-spacing: -0.16px;
+        padding: 16px 50px;
+        height: auto;
+        border-radius: 6px;
+        background: $color url(#{$img}/arrow-outside.svg) no-repeat right 20px center / 24px 24px;
+        @include desktop {
+            font-size: 18px;
+            padding: 26px 70px;
+        }
+    }
+}

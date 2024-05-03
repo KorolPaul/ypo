@@ -13,6 +13,10 @@
         background-color: #CAD2F5;
     }
 
+    &__purple {
+        background-color: #D5CFFC;
+    }
+
     &_content {
         @include layout;
     }

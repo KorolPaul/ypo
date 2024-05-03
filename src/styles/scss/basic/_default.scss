@@ -27,7 +27,6 @@ main {
 
 a {
     color: $color;
-    text-decoration: none;
     transition: .2s $easing color,
                 .2s $easing opacity;
 

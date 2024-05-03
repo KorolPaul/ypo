@@ -1,41 +1,72 @@
-.challenges {
+.challenge {
     border-radius: 16px;
     border: 1px solid $color;
-    padding: 44px 20px;
+    overflow: hidden;
+    position: relative;
+    text-transform: uppercase;
 
-    &_title {
-        font-size: 26px;
-        font-weight: 700;
-        line-height: 1.06;
-        letter-spacing: -0.52px;
-        text-transform: uppercase;
-        display: block;
-        white-space: nowrap;
-    }
+    &_period {
+        position: absolute;
+        left: 0;
+        top: 0;
+        font-size: 30px;
+        font-weight: 800;
+        line-height: 1;
+        letter-spacing: -0.9px;
+        text-align: center;
+        padding: 22px 20px;
+        background-color: #C1BFE5;
 
-    &_image-wrapper {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 269px;
-        margin: 0 0 14px;
-        border: 1px solid $color;
+        .swiper-slide:nth-child(2) & {
+            background-color: #A9AAA4;
+        }
+        .swiper-slide:nth-child(3) & {
+            background-color: #DADFDF;
+        }
+        .swiper-slide:nth-child(4) & {
+            background-color: #C6D18D;
+        }
     }
 
     &_image {
-        max-height: 90%;
+        display: block;
+        width: 100%;
     }
 
-    &_text {
-        display: block;
-        text-align: center;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 1.5;
-        letter-spacing: -0.48px;
-        text-transform: uppercase;
-        @include tablet {
-            font-size: 24px;
+    &_content {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 36px 24px;
+        background-color: #C1BFE5;
+        backdrop-filter: blur(12px);
+
+        .swiper-slide:nth-child(2) & {
+            background-color: #A9AAA4;
         }
+        .swiper-slide:nth-child(3) & {
+            background-color: #DADFDF;
+        }
+        .swiper-slide:nth-child(4) & {
+            background-color: #C6D18D;
+        }
+    }
+
+    &_title {
+        font-size: 26px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 1;
+        display: block;
+        margin: 0 0 22px;
+    }
+
+    &_subtitle {
+        display: block;
+        font-size: 20px;
+        font-weight: 900;
+        line-height: 1;
+        letter-spacing: -0.6px;
     }
 }
