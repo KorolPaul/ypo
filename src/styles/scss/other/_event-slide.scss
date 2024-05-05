@@ -2,37 +2,34 @@
     border-radius: 18px;
     position: relative;
     overflow: hidden;
+    color: $color;
 
     &_date {
         font-size: 20px;
         font-weight: 700;
-        position: absolute;
-        left: 16px;
-        top: 37px;
         text-transform: uppercase;
+        padding: 40px 20px 40px 84px;
+        position: relative;
         @include desktop {
             font-size: 24px;
-            top: 60px;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
             left: 42px;
+            top: 40px;
+            height: 24px;
+            width: 24px;
+            background-color: currentColor;
         }
     }
 
     &_content {
-        position: absolute;
-        left: 16px;
-        top: 327px;
         text-transform: uppercase;
-        color: $cLight;
-    }
-
-    &_type {
-        font-size: 14px;
-        font-weight: 500;
-        line-height: 97%;
-        border-radius: 8px;
-        background: rgba(0, 0, 0, 0.37);
-        backdrop-filter: blur(24px);
-        padding: 6px 16px;
+        color: $color;
+        padding: 42px;
+        margin: -50px 0 0;
     }
 
     &_title {
@@ -48,15 +45,20 @@
 
     &_subtitle {
         display: block;
-        font-size: 18px;
+        font-size: 28px;
         font-weight: 500;
         line-height: 104%;
-        @include desktop {
-            font-size: 42px;
-        }
     }
 
     &_label {
         position: absolute;
+        height: 60px;
+        left: -40px;
+        top: 88px;
+        @include desktop {
+            height: 94px;
+            left: -44px;
+            top: 55%;
+        }
     }
 }

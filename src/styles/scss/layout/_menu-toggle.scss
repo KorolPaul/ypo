@@ -19,6 +19,10 @@
     @include desktop {
         display: none;
     }
+
+    &:hover {
+        background-color: $color;
+    }
     
     &_lines {
         display: flex;
@@ -31,6 +35,4 @@
         height: 2px;
         background-color: $cLight;
     }
-
-
 }

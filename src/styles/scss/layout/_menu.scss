@@ -1,10 +1,9 @@
 
 .menu {
     z-index: 9;
-    display: flex;
     opacity: 0;
     pointer-events: none;
-    position: absolute;
+    position: fixed;
     flex-direction: column;
     gap: 13px;
     opacity: 0;
@@ -18,6 +17,7 @@
     box-sizing: border-box;
     overflow: auto;
     z-index: 10;
+    background-color: $cLight;
     transition: .2s $easingSmooth opacity,
                 .2s $easingSmooth transform;
     @include desktop {
@@ -43,37 +43,61 @@
 
     &_links {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
+        @include desktop {
+            flex-direction: row;
+        }
     }
 
     &_link {
-        background-color: $color;
-        color: $cLight;
-        font-size: 14px;
+        font-size: 20px;
+        font-weight: 900;
         display: block;
-        font-weight: 700;
         text-transform: uppercase;
         height: 64px;
         line-height: 64px;
         padding: 0 18px;
+        text-align: center;
+        text-decoration: none;
+        border-top: 1px solid currentColor;
+        @include desktop {
+            text-decoration: underline;
+            color: $cLight;
+            background-color: $color;
+            font-size: 14px;
+            font-weight: 700;
+            border: none;
+        }
 
         &:hover {
-            background: linear-gradient(79deg, #1B1B1B 3.31%, #FF5208 71.93%, #FF5208 91.85%);;
+            @include desktop {
+                background: linear-gradient(79deg, #1B1B1B 3.31%, #FF5208 71.93%, #FF5208 91.85%);;
+            }
         }
 
         &:first-child {
             border-radius: 8px 0 0 8px;
+            border: none;
         }
         &:last-child {
             border-radius: 0 8px 8px 0;
         }
     }
 
+    &_link-icon {
+        vertical-align: baseline;
+        margin: 0 0 -3px 5px;
+        @include desktop {
+            display: none;
+        }
+    }
+
     &_logo {
         position: absolute;
-        top: 34px;
-        left: 32px;
-        width: 59px;
+        top: 22px;
+        margin-left: -101px;
+        left: 50%;
+        width: 203px;
         @include desktop {
             display: none; 
         }

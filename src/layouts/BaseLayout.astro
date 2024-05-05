@@ -33,7 +33,9 @@ const { title } = Astro.props;
          -->
 
         <slot />
-
+        <script>
+            import "@lottiefiles/lottie-player";
+		</script>
         <script is:inline src="/js/main.js"></script>
     </body>
 </html>
