@@ -2,13 +2,14 @@
 export interface Props {
     date: string;
     title: string;
+    title2: string;
     label: string;
     subtitle: string;
     src: string;
     color: string;
 }
 
-const { title, date, label, subtitle, src, color } = Astro.props;
+const { title, title2, date, label, subtitle, src, color } = Astro.props;
 ---
 
 <a href="/events/event" class="event-slide" style={{backgroundColor: color}}>
@@ -16,7 +17,11 @@ const { title, date, label, subtitle, src, color } = Astro.props;
     <span class="event-slide_date">{date}</span>
     <img class="event-slide_image" src={src} alt="" />
     <div class="event-slide_content">
-        <span class="event-slide_title">{title}</span>
+        <span class="event-slide_title">
+            {title}
+            <div>{title2}</div>
+        </span>
         <span class="event-slide_subtitle">{subtitle}</span>
+        <img src="/img/card-arrow.svg" alt="" class="event-slide_arrow">
     </div>
 </a>

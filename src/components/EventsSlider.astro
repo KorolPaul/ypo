@@ -19,18 +19,18 @@ const { title } = Astro.props;
                 <div class="swiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <EventSlide color="#A18EF6" date="September 28, 2024" label="learn" title="Ken Griffin" subtitle="An enlightening evening with Ken Griffin, discussing..." src="/img/events/event-1.png" />
+                            <EventSlide color="#A18EF6" date="September 28, 2024" label="learn" title="Ken" title2="Griffin" subtitle="An enlightening evening with Ken Griffin, discussing..." src="/img/events/event-1.png" />
                         </div>
                         <div class="swiper-slide">
-                            <EventSlide color="#EFFFAC" date="October 22, 2024" label="inspire" title="Lee Hausner" subtitle="Parents will receive education on how to raise privileged children..." src="/img/events/event-2.png" />
+                            <EventSlide color="#EFFFAC" date="October 22, 2024" label="inspire" title="Lee" title2="Hausner" subtitle="Parents will receive education on how to raise privileged children..." src="/img/events/event-2.png" />
                         </div>
                         <div class="swiper-slide">
-                            <EventSlide color="#D5D3C6" date="November 16, 2024" label="connect" title="Greg Norman & Bubba Watson" subtitle="This event will feature golf legends Greg Norman and..." src="/img/events/event-3.png" />
+                            <EventSlide color="#D5D3C6" date="November 16, 2024" label="connect" title="Greg Norman &" title2="Bubba Watson" subtitle="This event will feature golf legends Greg Norman and..." src="/img/events/event-3.png" />
                         </div>
                     </div>
+                    <div class="swiper-pagination"></div>
     
                 </div>
-                <div class="swiper-pagination"></div>
 
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
@@ -45,15 +45,15 @@ const { title } = Astro.props;
     const swiper = new Swiper(".swiper", {
         loop: false,
         modules: [Navigation, Pagination],
-        slidesPerView: 1,
         spaceBetween: 20,
+        slidesPerView: 'auto',
         breakpoints: {
             768: {
-                slidesPerView: 2.5,
             },
         },
         pagination: {
             el: ".swiper-pagination",
+            clickable: true,
         },
         navigation: {
             nextEl: ".swiper-button-next",

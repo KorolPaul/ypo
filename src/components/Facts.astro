@@ -11,47 +11,50 @@ const { title } = Astro.props;
 <div class="facts">
     <h2>{title}</h2>
     <div class="facts_list">
-        <div class="swiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <Card
-                        title="Social Stamina Booster:"
-                        jsonSrc="/img/facts/card-2.png"
-                        text="Attending our events can dramatically boost your social stamina."
-                    />
+        <div class="swiper-holder">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <Card
+                            title="Social Stamina Booster:"
+                            jsonSrc="/img/facts/1.json"
+                            text="Attending our events can dramatically boost your social stamina."
+                        />
+                    </div>
+                    <div class="swiper-slide">
+                        <Card
+                            title="Networking Boost:"
+                            jsonSrc="/img/facts/2.json"
+                            text="Each event can net you 5+ valuable new contacts. Network effortlessly!"
+                            color="#D3E5FF"
+                        />
+                    </div>
+                    <div class="swiper-slide">
+                        <Card
+                            title="Inspiration Overload:"
+                            jsonSrc="/img/facts/3.json"
+                            text="Our events might cause inspiration overload. Be ready to innovate!"
+                            color="#FFE0F3"
+                        />
+                    </div>
+                    <div class="swiper-slide">
+                        <Card
+                            title="Fun Multiplier:"
+                            jsonSrc="/img/facts/4.json"
+                            text="Experience a 200% increase in daily fun after attending our events!"
+                            color="#D5D3C6"
+                        />
+                    </div>
+                    
                 </div>
-                <div class="swiper-slide">
-                    <Card
-                        title="Networking Boost:"
-                        jsonSrc="/img/facts/card-1.png"
-                        text="Each event can net you 5+ valuable new contacts. Network effortlessly!"
-                        color="#D3E5FF"
-                    />
-                </div>
-                <div class="swiper-slide">
-                    <Card
-                        title="Inspiration Overload:"
-                        jsonSrc="/img/facts/card-2.png"
-                        text="Our events might cause inspiration overload. Be ready to innovate!"
-                        color="#FFE0F3"
-                    />
-                </div>
-                <div class="swiper-slide">
-                    <Card
-                        title="Fun Multiplier:"
-                        jsonSrc="/img/facts/card-1.png"
-                        text="Experience a 200% increase in daily fun after attending our events!"
-                        color="#D5D3C6"
-                    />
-                </div>
-                
+
+                <div class="swiper-pagination"></div>
+
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
             </div>
-
-            <div class="swiper-pagination"></div>
-
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
         </div>
+
     </div>
 
     <div class="facts_button">

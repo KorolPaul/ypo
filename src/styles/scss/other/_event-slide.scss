@@ -4,6 +4,10 @@
     position: relative;
     color: $color;
     text-decoration: none;
+    width: 394px;
+    @include desktop {
+        width: 822px;
+    }
 
     &_date {
         font-size: 20px;
@@ -31,6 +35,7 @@
         color: $color;
         padding: 42px;
         margin: -50px 0 0;
+        position: relative;
     }
 
     &_title {
@@ -50,6 +55,10 @@
         font-weight: 500;
         line-height: 104%;
         min-height: 116px;
+        padding-right: 50px;
+        @include desktop {
+            padding-right: 100px;
+        }
     }
 
     &_label {
@@ -59,8 +68,24 @@
         top: 88px;
         @include desktop {
             height: 94px;
-            left: -204px;
+            left: -345px;
             top: 200px;
+        }
+    }
+
+    &_arrow {
+        width: 46px;
+        height: 46px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        right: 10px;
+        bottom: 50px;
+        @include desktop {
+            width: 102px;
+            height: 101px;
+            right: 32px;
+            bottom: 42px;
         }
     }
 }

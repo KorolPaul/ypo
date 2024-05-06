@@ -12,10 +12,7 @@ const { jsonSrc, color, title, text } = Astro.props;
 <div class="card" style={`background-color: ${color || '#ECECDA'}`}>
     <span class="card_title">{title}</span>
     <div class="card_image-wrapper">
-        <!--
-            <lottie-player src={jsonSrc} background="transparent" speed="1" loop autoplay />
-         -->
-         <img src={jsonSrc} alt="" class="card_image">
+        <lottie-player class="card_image" src={jsonSrc} background="transparent" speed="1" loop autoplay />
     </div>
     <span class="card_text">{text}</span>
 </div>

@@ -11,15 +11,21 @@
         text-transform: uppercase;
         display: block;
         white-space: nowrap;
+        max-width: 60%;
+        @include desktop {
+            max-width: none;
+        }
     }
 
     &_image-wrapper {
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 269px;
+        height: 160px;
         margin: 0 0 14px;
-        border: 1px solid $color;
+        @include desktop {
+            height: 237px;
+        }
     }
 
     &_image {

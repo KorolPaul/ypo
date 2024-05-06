@@ -5,6 +5,15 @@
         padding-bottom: 220px;
     }
 
+    &__beige, 
+    &__blue,
+    &__purple {
+        padding-top: 74px;
+        @include desktop {
+            padding-top: 154px;
+        }
+    }
+
     &__beige {
         background-color: #D5D3C6;
     }

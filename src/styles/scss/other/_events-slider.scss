@@ -19,4 +19,10 @@
         @include desktop {
         }
     }
+
+    .swiper-slide {
+        @include desktop {
+            width: 822px !important;
+        }
+    }
 }

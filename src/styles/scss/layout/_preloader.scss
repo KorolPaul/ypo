@@ -1,4 +1,6 @@
 .preloader {
+    display: none !important;
+
     position: fixed;
     top: 0;
     left: 0;
@@ -15,7 +17,7 @@
     .loaded & {
         animation: autohide 7.25s linear forwards;
         @include tablet {
-            animation-duration: 7.75s;
+            animation-duration: 7.25s;
         }
     }
 

@@ -71,24 +71,31 @@ import Access from "~/components/Access.astro";
         <EventsSlider title="UPCOMING EVENTS" />
     </section>
 
-    <section>
+    <section class="section">
         <div class="section_content">
             <Events title="List EVENTS" />
+        </div>
+    </section>
 
+    <section class="section">
+        <div class="section_content">
             <Facts title="QUICK FACTS..." />
         </div>
         
-        <TickerBig>
-            Challenge <span class="stroke-text">Everything</span> Win Everyday Challenge Everything. <span class="stroke-text">Win Everyday</span>
-        </TickerBig>
     </section>
+    <TickerBig>
+        Challenge <span class="stroke-text">Everything</span> Win Everyday Challenge Everything. <span class="stroke-text">Win Everyday</span>
+    </TickerBig>
 
     <section class="section section__purple">
-        <a name="mission"></a>
-        <Challenges title="Challenge Showcase" />
+        <div class="section_content">
+
+            <a name="mission"></a>
+            <Challenges title="Challenge Showcase" />
+        </div>
     </section>
 
-    <section>
+    <section class="section">
         <div class="section_content">
             <div class="about">
                 <h2>For more about us and our Leadership, visit our Mission page to dive deeper into our vision</h2>

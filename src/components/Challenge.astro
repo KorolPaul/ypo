@@ -11,7 +11,7 @@ const { src, color, title, period } = Astro.props;
 
 <div class="challenge">
     <span class="challenge_period" style={`background-color: ${color || '#ECECDA'}`}>{period}</span>
-    <img src={src} alt="" class="challenge_image">
+    <video src={src} class="challenge_image" loop muted autoplay playsinline>
     <div class="challenge_content" style={`background-color: ${color || '#ECECDA'}`}>
         <span class="challenge_title">{title}</span>
         <span class="challenge_subtitle">
