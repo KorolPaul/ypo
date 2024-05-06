@@ -2,8 +2,8 @@
     display: block;
     border-radius: 18px;
     position: relative;
-    overflow: hidden;
     color: $color;
+    text-decoration: none;
 
     &_date {
         font-size: 20px;
@@ -49,6 +49,7 @@
         font-size: 28px;
         font-weight: 500;
         line-height: 104%;
+        min-height: 116px;
     }
 
     &_label {
@@ -58,8 +59,8 @@
         top: 88px;
         @include desktop {
             height: 94px;
-            left: -44px;
-            top: 55%;
+            left: -204px;
+            top: 200px;
         }
     }
 }

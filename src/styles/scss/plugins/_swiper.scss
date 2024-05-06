@@ -30,7 +30,7 @@
     margin-left: auto;
     margin-right: auto;
     position: relative;
-    overflow: hidden;
+    // overflow: hidden;
     list-style: none;
     padding: 0;
     z-index: 1;
@@ -276,16 +276,16 @@
 .swiper-button-next,
 .swiper-button-prev {
     position: absolute;
-    top: var(--swiper-navigation-top-offset, 50%);
-    width: calc(var(--swiper-navigation-size)/ 44 * 27);
-    height: var(--swiper-navigation-size);
-    margin-top: calc(0px - (var(--swiper-navigation-size)/ 2));
-    z-index: 10;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--swiper-navigation-color, var(--swiper-theme-color))
+    width: 46px;
+    height: 46px;
+    bottom: -87px;
+    right: 0;
+    border-radius: 4px;
+    transition: .2s $easingSmooth filter;
+
+    &:hover {
+        filter: invert(1);
+    }
 }
 
 .swiper-button-next.swiper-button-disabled,
@@ -307,57 +307,17 @@
     display: none !important
 }
 
-.swiper-button-next svg,
-.swiper-button-prev svg {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    transform-origin: center
+.swiper-button-prev {
+    background: $cLight url(#{$img}/prev.svg) no-repeat center / 100% 100%;
+    right: 68px;
 }
 
-.swiper-rtl .swiper-button-next svg,
-.swiper-rtl .swiper-button-prev svg {
-    transform: rotate(180deg)
-}
-
-.swiper-button-prev,
-.swiper-rtl .swiper-button-next {
-    left: var(--swiper-navigation-sides-offset, 10px);
-    right: auto
-}
-
-.swiper-button-next,
-.swiper-rtl .swiper-button-prev {
-    right: var(--swiper-navigation-sides-offset, 10px);
-    left: auto
+.swiper-button-next {
+    background: $cLight url(#{$img}/next.svg) no-repeat center / 100% 100%;
 }
 
 .swiper-button-lock {
     display: none
-}
-
-.swiper-button-next:after,
-.swiper-button-prev:after {
-    text-transform: none !important;
-    letter-spacing: 0;
-    font-variant: initial;
-    line-height: 1
-}
-
-.swiper-button-prev:after,
-.swiper-rtl .swiper-button-next:after {
-    content: 'prev'
-}
-
-.swiper-button-next,
-.swiper-rtl .swiper-button-prev {
-    right: var(--swiper-navigation-sides-offset, 10px);
-    left: auto
-}
-
-.swiper-button-next:after,
-.swiper-rtl .swiper-button-prev:after {
-    content: 'next'
 }
 
 .swiper-pagination {

@@ -1,9 +1,10 @@
 .events-slider {
     &_bg {
         background-color: $color;
-        padding: 0 0 362px;
+        height: 504px;
         @include desktop {
             padding: 0;
+            height: 650px;
         }
     }
 
@@ -13,10 +14,9 @@
 
     &_content {
         @include layout;
-        margin-top: -228px;
+        margin-top: -430px;
         color: $cLight;
         @include desktop {
-            margin-top: -283px;
         }
     }
 }
