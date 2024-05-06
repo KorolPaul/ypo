@@ -4,34 +4,35 @@ input[type="search"],
 input[type="email"],
 input[type="url"],
 input[type="tel"] {
-    @include placeholder-color(#BBBBBB);
+    @include placeholder-color(#919191);
     color: $color;
-    background: transparent;
-    border: none;
-    border-bottom: 1px solid $color;
-    border-radius: 0;
+    background: $cLight;
+    border: 1px solid $color;
+    border-radius: 4px;
     box-sizing: border-box;
-    font: 38px/1 $font-family;
-    letter-spacing: -1.9px;
-    height: auto;
-    padding: 16px 0;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: -0.8px;
+    text-transform: uppercase;
+    height: 68px;
+    line-height: 68px;
+    padding: 0 16px;
     width: 100%;
     transition: .2s $easingSmooth border-color,
                 .2s $easingSmooth color,
                 .2s $easingSmooth box-shadow;
+    text-align: center;
     @include tablet {
-        max-width: 604px;
-    }
-    @include big-height {
-        font-size: 58px;
+        font-size: 24px;
     }
 
     &:focus {
         color: $color;
+        box-shadow: 0 0 1px 0 $color;
     }
 
     .error & {
-        @include placeholder-color(#ff0000);
-        border-color: #ff0000;
+        border-color: #F00;
+        color: #F00;
     }
 }

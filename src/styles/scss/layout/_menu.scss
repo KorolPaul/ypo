@@ -21,6 +21,7 @@
     transition: .2s $easingSmooth opacity,
                 .2s $easingSmooth transform;
     @include desktop {
+        background-color: transparent;
         flex-direction: row;
         align-items: center;
         opacity: 1;
@@ -33,6 +34,7 @@
         gap: 0;
         height: auto;
         width: auto;
+        overflow: visible;
     }
 
 
@@ -52,21 +54,27 @@
     &_link {
         font-size: 20px;
         font-weight: 900;
-        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         text-transform: uppercase;
         height: 64px;
         line-height: 64px;
-        padding: 0 18px;
+        padding: 0 4px;
         text-align: center;
         text-decoration: none;
+        white-space: nowrap;
         border-top: 1px solid currentColor;
         @include desktop {
+            position: relative;
+            display: block;
             text-decoration: underline;
             color: $cLight;
             background-color: $color;
             font-size: 14px;
             font-weight: 700;
             border: none;
+            padding: 0 18px;
         }
 
         &:hover {
@@ -87,8 +95,19 @@
     &_link-icon {
         vertical-align: baseline;
         margin: 0 0 -3px 5px;
+        width: 20px;
         @include desktop {
             display: none;
+        }
+    }
+
+    &_link-soon {
+        width: 66px;
+        margin: 0 3px 0 8px;
+        @include desktop {
+            position: absolute;
+            top: -24px;
+            left: 90px;
         }
     }
 

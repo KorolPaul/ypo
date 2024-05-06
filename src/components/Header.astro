@@ -1,31 +1,33 @@
 <header class="header">
     <div class="header_holder">
         <a href="/" class="logo">
-            <lottie-player class="menu_logo-image" src="/img/logo.json"  background="transparent"  speed="1" loop autoplay></lottie-player>
+            <lottie-player class="menu_logo-image" src="/img/logo.json" background="transparent" speed="1" loop autoplay></lottie-player>
         </a>
         <div class="menu">
             <a href="/" class="menu_logo">
-                <lottie-player class="menu_logo-image" src="/img/menu-logo.json"  background="transparent"  speed="1" loop autoplay></lottie-player>
+                <lottie-player class="menu_logo-image" src="/img/menu-logo.json" background="transparent" speed="1" loop autoplay></lottie-player>
             </a>
             <nav class="menu_links">
-                <a href="/team" class="menu_link">Events</a>
-                <a href="/culture" class="menu_link">Your Challenge</a>
-                <a href="/contact" class="menu_link">
+                <a href="/#events" class="menu_link">Events</a>
+                <a href="/#challenge" class="menu_link">Your Challenge</a>
+                <a href="/mission" class="menu_link">
                     Mission
-                    <img src="/img/arrow-outside-dark.svg" alt="" class="menu_link-icon">
                 </a>
                 <a href="/contact" class="menu_link menu_link__soon">
                     Global Impact
+                    <lottie-player class="menu_link-soon" src="/img/soon.json"  background="transparent" speed="1" loop autoplay></lottie-player>
                     <img src="/img/arrow-outside-dark.svg" alt="" class="menu_link-icon">
                 </a>
             </nav>
         </div>
         <button class="menu-toggle">
-            <span>MENU</span>
+            <span class="menu-toggle_title">MENU</span>
             <div class="menu-toggle_lines">
                 <div class="menu-toggle_line"></div>
                 <div class="menu-toggle_line"></div>
                 <div class="menu-toggle_line"></div>
+                <div class="menu-toggle_dioganal-line"></div>
+                <div class="menu-toggle_dioganal-line"></div>
             </div>
         </button>
     </div>
@@ -35,12 +37,6 @@
     const menuToggleElement = document.querySelector(".menu-toggle");
     if (menuToggleElement) {
         menuToggleElement.addEventListener("click", (e: Event) => {
-            if (document.body.classList.contains("menu-opened")) {
-                e.target.innerText = "Menu";
-            } else {
-                e.target.innerText = "Close";
-            }
-
             document.body.classList.toggle("menu-opened");
         });
     }

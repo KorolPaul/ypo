@@ -1,0 +1,10 @@
+.wow-button {
+    position: relative;
+
+    &_success {
+        position: absolute;
+        bottom: 100%;
+        left: 0;
+        width: 100%;
+    }
+}

@@ -1,0 +1,62 @@
+<div class="password">
+    <div class="password_content">
+        <span class="password_title">
+            Please enter your password to unlock exclusive access to the <strong>Learn, Connect, Inspire 2024-2025 event calendar</strong>
+        </span>
+        <form class="form password_form">
+            <div class="form_row">
+                <input id="password-text" type="text" placeholder="Enter password">
+            </div>
+            <div class="form_row">
+                <input id="password-submit" type="submit" value="Unlock Calendar">
+            </div>
+        </form>
+        <img src="/img/logo.svg" alt="" class="password_logo">
+        <lottie-player class="password_success password_success__mobile" src="/img/password-success-mobile.json"  background="transparent"  speed="1"></lottie-player>
+        <lottie-player class="password_success password_success__desktop" src="/img/password-success.json"  background="transparent"  speed="1"></lottie-player>
+    </div>
+</div>
+<div class="preloader">
+    <lottie-player class="preloader_image preloader_image__desktop" src="/img/preloader.json"  background="transparent" speed="1"></lottie-player>
+    <lottie-player class="preloader_image preloader_image__mobile" src="/img/preloader-mobile.json"  background="transparent" speed="1"></lottie-player>
+</div>
+
+
+<script is:inline>
+    const submit = document.getElementById('password-submit');
+    const form = document.querySelector('.password_form');
+    const input = document.getElementById('password-text');
+
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        if (input.value.toLowerCase() !== 'iloveypo') {
+            form.classList.add('error');
+        } else {
+            form.classList.remove('error');
+            document.querySelectorAll('.password_success').forEach(el => el.play());
+
+            localStorage.setItem('logined', 1);
+
+            setTimeout(() => {
+                document.querySelector('.password').classList.add('authorized');
+            }, 2400);
+
+            setTimeout(() => {
+                document.querySelectorAll('.preloader_image').forEach(el => el.play());
+                document.body.classList.add('loaded');
+            }, 3000);
+        }
+    })
+
+    if (localStorage.getItem('logined')) {
+        document.querySelector('.password').style.display = 'none';
+        document.querySelectorAll('.preloader_image').forEach(el => {
+            el.addEventListener("ready", () => {
+                el?.play()
+            });
+            
+        });
+        document.body.classList.add('loaded');
+    }
+</script>

@@ -1,4 +1,5 @@
 .event-slide {
+    display: block;
     border-radius: 18px;
     position: relative;
     overflow: hidden;
@@ -53,7 +54,7 @@
     &_label {
         position: absolute;
         height: 60px;
-        left: -40px;
+        left: -194px;
         top: 88px;
         @include desktop {
             height: 94px;

@@ -1,26 +1,27 @@
 input[type="submit"] {
-    @include placeholder-color(#BBBBBB);
-    cursor: pointer;
-    color: $color;
-    background: transparent;
-    border: none;
-    border-bottom: 4px solid $color;
-    border-radius: 0;
+    color: $cLight;
+    background: $color;
+    border: 1px solid $color;
+    border-radius: 4px;
     box-sizing: border-box;
-    font: 38px/1 $font-family;
-    letter-spacing: -1.9px;
-    height: auto;
-    padding: 16px 0 10px;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: -0.8px;
+    text-transform: uppercase;
+    height: 68px;
+    line-height: 68px;
+    padding: 0 16px;
+    width: 100%;
     transition: .2s $easingSmooth border-color,
                 .2s $easingSmooth color,
-                .2s $easingSmooth opacity;
-    @include big-height {
-        font-size: 58px;
+                .2s $easingSmooth box-shadow;
+    text-align: center;
+    @include tablet {
+        font-size: 24px;
     }
 
-    &:focus,
-    &:hover {
-        opacity: .7;
+    &:focus {
+        color: $cLight;
     }
 
     &:disabled {

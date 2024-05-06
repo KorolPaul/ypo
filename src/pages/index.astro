@@ -6,9 +6,12 @@ import EventsSlider from "~/components/EventsSlider.astro";
 import Events from "~/components/Events.astro";
 import Facts from "~/components/Facts.astro";
 import Challenges from "~/components/Challenges.astro";
+import Access from "~/components/Access.astro";
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="YPO">
+	<Access />
+
     <section class="section">
         <div class="section_content">
             <h1>Your Gateway to Events, Speakers, and Challenges</h1>
@@ -40,9 +43,19 @@ import Challenges from "~/components/Challenges.astro";
                 <p class="showcase_text">
                     <span>2024-2025</span> unfolds as a landmark year for our Event Calendar, centered around our ethos: <strong>Learn, Connect, Inspire</strong>. Engage with the <strong>People and Places of Miami</strong> as we unite a vibrant community committed to shaping the future through innovation and shared experiences.
                 </p>
-                <button>
+
+
+                <button class="wow-button">
                     Click & <span class="stroke-text">WOW</span>
+                    <lottie-player  class="wow-button_success" src="/img/wow-button.json"  background="transparent"  speed="1"></lottie-player>
+
                 </button>
+                <script is:inline>
+                    document.querySelector('.wow-button').addEventListener('click', (e) => {
+                        e.preventDefault();
+                        document.querySelector('.wow-button_success').play();
+                    })
+                </script>
             </div>
         </div>
 
@@ -54,6 +67,7 @@ import Challenges from "~/components/Challenges.astro";
             of Miami
         </TickerBig>
 
+        <a name="events"></a>
         <EventsSlider title="UPCOMING EVENTS" />
     </section>
 
@@ -70,6 +84,7 @@ import Challenges from "~/components/Challenges.astro";
     </section>
 
     <section class="section section__purple">
+        <a name="mission"></a>
         <Challenges title="Challenge Showcase" />
     </section>
 

@@ -12,7 +12,7 @@ export interface Props {
 const { title, date, label, tags, src } = Astro.props;
 ---
 
-<div class="event">
+<a class="event" href="/events/event">
     {label && <Label>{label}</Label>}
     <span class="event_date">{date}</span>
     <div class="event_content">
@@ -23,4 +23,4 @@ const { title, date, label, tags, src } = Astro.props;
         <span class="event_arrow">SEE DETAILS</span>
     </div>
     <img class="event_image" src={src} alt="" />
-</div>
+</a>
