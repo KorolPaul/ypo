@@ -26,8 +26,18 @@
     position: relative;
     overflow: hidden;
     padding-bottom: 85px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
     @include tablet {
         padding-bottom: 132px;
+    }
+    @include desktop {
+        // margin-left: calc(-50vw - 20px + $max-width / 2);
+        // margin-right: calc(-50vw - 20px + $max-width / 2);
+        // padding-left: calc(50vw - 20px + $max-width / 2);
+        // padding-right: calc(50vw - 20px + $max-width / 2);
     }
 }
 

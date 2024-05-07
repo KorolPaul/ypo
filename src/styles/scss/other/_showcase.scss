@@ -14,13 +14,15 @@
 
     &_video-wrapper {
         border-radius: 16px;
-        background-color: $color;
         margin: 0 auto 76px;
-        max-width: 600px;
     }
 
     &_video {
-        min-height: 696px;
+        max-width: 100%;
+        border-radius: 16px;
+        @include desktop {
+            min-height: 696px;
+        }
     }
 
     &_text {

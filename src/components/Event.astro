@@ -5,22 +5,65 @@ export interface Props {
     date: string;
     title: string;
     label?: string;
+    color: string;
     src: string;
+    srcMobile: string;
     tags: Array<string>;
 }
 
-const { title, date, label, tags, src } = Astro.props;
+const { title, date, label, tags, src, srcMobile, color } = Astro.props;
+
 ---
 
 <a class="event" href="/events/event">
-    {label && <Label>{label}</Label>}
-    <span class="event_date">{date}</span>
+    {label && <lottie-player class="event_label" src={`/img/labels/${label}.json`}  background="transparent"  speed="1" loop autoplay></lottie-player>}
+    <span class="event_date" style={{color: color}}>{date}</span>
     <div class="event_content">
-        <span class="event_title">{title}</span>
+        <span class="event_title" style={{color: color}}>{title}</span>
         <div class="event_tags">
             {tags.map((item) => <span class="event_tag">{item}</span>)}
         </div>
         <span class="event_arrow">SEE DETAILS</span>
     </div>
-    <img class="event_image" src={src} alt="" />
+    <video class="event_image" src={srcMobile || src} data-src={src} muted />
 </a>
+
+<script>
+    const isMobile = window.innerWidth <= 768;
+    document.querySelectorAll('.event_image').forEach(video => {
+        if (video.dataset.src && !isMobile) {
+            video.setAttribute('src', video.dataset.src);
+        }
+    });
+
+    document.querySelectorAll('.event').forEach(eventElement => {
+        if (isMobile) {
+            const thresholdSteps = [...Array(10).keys()].map(i => i / 10);
+            let ratio = 0.6;
+
+            const observerCallback = function (e) {
+                const { target, intersectionRatio } = e[0];
+                if (intersectionRatio > ratio) {
+                    target.querySelector('video').play();
+                } else {
+                    target.querySelector('video').pause();
+                }
+            };
+
+            const observer = new IntersectionObserver(observerCallback, {
+                rootMargin: '0px 0px -15% 0px',
+                threshold: thresholdSteps,
+                //root: document.body
+            });
+            observer.observe(eventElement);
+        } else {
+            eventElement.addEventListener('mouseenter', (e) => {
+                e.target.querySelector('video')?.play();
+            });
+            eventElement.addEventListener('mouseleave', (e) => {
+                setTimeout(() => e.target.querySelector('video')?.pause(), 100)
+            });
+        }
+
+    });
+</script>

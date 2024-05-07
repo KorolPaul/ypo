@@ -6,16 +6,17 @@ export interface Props {
     label: string;
     subtitle: string;
     src: string;
+    jsonSrc: string;
     color: string;
 }
 
-const { title, title2, date, label, subtitle, src, color } = Astro.props;
+const { title, title2, date, label, subtitle, src, jsonSrc, color } = Astro.props;
 ---
 
 <a href="/events/event" class="event-slide" style={{backgroundColor: color}}>
     <lottie-player class="event-slide_label" src={`/img/labels/${label}.json`}  background="transparent"  speed="1" loop autoplay></lottie-player>
     <span class="event-slide_date">{date}</span>
-    <img class="event-slide_image" src={src} alt="" />
+    <lottie-player class="slide_image" src={jsonSrc}  background="transparent"  speed="1" loop autoplay></lottie-player>
     <div class="event-slide_content">
         <span class="event-slide_title">
             {title}

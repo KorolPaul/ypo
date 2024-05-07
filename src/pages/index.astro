@@ -18,7 +18,7 @@ import Access from "~/components/Access.astro";
             <Ticker />
 
             <div class="stats">
-                <div class="stats_item">
+                <div class="stats_item active">
                     <span class="stats_value">7</span>
                     <span class="stats_label">Signature Events</span>
                 </div>
@@ -35,10 +35,52 @@ import Access from "~/components/Access.astro";
                     <span class="stats_label">'Impact' Initiative</span>
                 </div>
             </div>
+            <script>
+                const statItems = document.querySelectorAll('.stats_item');
+                let index = 0;
+
+                setInterval(() => {
+                    statItems.forEach(el => el.classList.remove('active'));
+
+                    if (index <= statItems.length -2) {
+                        index++;
+                    } else {
+                        index = 0;
+                    }
+
+                    statItems[index].classList.add('active');
+                }, 2000);
+
+            </script>
 
             <div class="showcase">
                 <div class="showcase_video-wrapper">
-                    <video src="" class="showcase_video"></video>
+                    <video src="/img/main-video-mobile.mp4" data-src="/img/main-video.mp4" class="showcase_video" loop autoplay muted playsinline></video>
+
+                    <script>
+                        const videoWrapper = document.querySelector('.showcase_video-wrapper');
+
+                        if (videoWrapper) {
+                            videoWrapper.addEventListener('click', function(e) {
+                                if (!e.currentTarget.classList.contains('active')) {
+                                    e.currentTarget.classList.add('active');
+                                    e.currentTarget.querySelectorAll('video').forEach((video) => {
+                                        video.muted = false;
+                                        video.currentTime = 0;
+                                        video.controls = true;
+                                    });
+                                }
+                            });
+                        }
+
+                        const isMobile = window.innerWidth <= 768;
+                        
+                        videoWrapper?.querySelectorAll('video').forEach(video => {
+                            if (video.dataset.src && !isMobile) {
+                                video.setAttribute('src', video.dataset.src);
+                            }
+                        });
+                    </script>
                 </div>
                 <p class="showcase_text">
                     <span>2024-2025</span> unfolds as a landmark year for our Event Calendar, centered around our ethos: <strong>Learn, Connect, Inspire</strong>. Engage with the <strong>People and Places of Miami</strong> as we unite a vibrant community committed to shaping the future through innovation and shared experiences.

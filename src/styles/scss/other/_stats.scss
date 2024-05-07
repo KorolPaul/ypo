@@ -3,8 +3,9 @@
     padding: 52px 0;
     border-top: 1px solid $color;
     border-bottom: 1px solid $color;
+    position: relative;
     @include desktop {
-        padding: 74 0;
+        padding: 74px 0;
         justify-content: space-between;
         gap: 50px;
     }
@@ -12,7 +13,30 @@
     &_item {
         display: flex;
         align-items: center;
-        gap: 30px;
+        gap: 20px;
+        position: absolute;
+        left: 0;
+        top: 52px;
+        width: 100%;
+        opacity: 0;
+        text-align: center;
+        justify-content: center;
+        transition: .3s $easingSmooth opacity;
+        @include tablet {
+            opacity: 1;
+            position: static;
+            text-align: left;
+            justify-content: flex-start;
+            gap: 30px;
+        }
+
+        &:first-child {
+            position: static;
+        }
+
+        &.active {
+            opacity: 1;
+        }
     }
 
     &_value {

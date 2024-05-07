@@ -66,6 +66,7 @@
         height: 60px;
         left: -194px;
         top: 88px;
+        z-index: 2;
         @include desktop {
             height: 94px;
             left: -345px;
