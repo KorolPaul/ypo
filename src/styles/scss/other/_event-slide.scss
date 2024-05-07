@@ -14,6 +14,7 @@
         text-transform: uppercase;
         padding: 40px 20px 40px 84px;
         position: relative;
+        display: block;
         @include desktop {
             font-size: 24px;
         }
@@ -56,7 +57,7 @@
         min-height: 116px;
         padding-right: 50px;
         @include desktop {
-            padding-right: 100px;
+            padding-right: 140px;
         }
     }
 

@@ -64,7 +64,7 @@
     z-index: 1;
     display: flex;
     transition-property: transform;
-    transition-timing-function: var(--swiper-wrapper-transition-timing-function, initial);
+    transition-timing-function: ease-out;
     box-sizing: content-box
 }
 
@@ -302,6 +302,10 @@
         width: 72px;
         height: 72px;
     }
+    @include media($max-width + 40px) {
+        right: 50%;
+        transform: translateX(834px);
+    }
 
     &:hover {
         background-color: $color;
@@ -328,9 +332,9 @@
 }
 
 .swiper-button-prev {
-    right: 88px;
+    margin-right: 88px;
     @include desktop {
-        right: 104px;
+        margin-right: 104px;
     }
 
     &::after {

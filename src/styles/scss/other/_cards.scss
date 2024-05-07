@@ -2,6 +2,8 @@
     border-radius: 16px;
     border: 1px solid $color;
     padding: 44px 20px;
+    min-height: 374px;
+    box-sizing: border-box;
 
     &_title {
         font-size: 26px;
@@ -10,7 +12,7 @@
         letter-spacing: -0.52px;
         text-transform: uppercase;
         display: block;
-        max-width: 60%;
+        max-width: 80%;
         @include desktop {
             max-width: none;
         }
