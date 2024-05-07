@@ -5,6 +5,7 @@
         padding-bottom: 220px;
     }
 
+
     &__beige, 
     &__blue,
     &__purple {
@@ -26,6 +27,13 @@
         background-color: #D5CFFC;
     }
 
+    &__small-indent {
+        padding-bottom: 65px;
+        @include desktop {
+            padding-bottom: 113px;
+        }
+    }
+    
     &_content {
         @include layout;
     }

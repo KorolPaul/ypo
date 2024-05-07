@@ -16,7 +16,7 @@ const { title, date, label, tags, src, srcMobile, color } = Astro.props;
 ---
 
 <a class="event" href="/events/event">
-    {label && <lottie-player class="event_label" src={`/img/labels/${label}.json`}  background="transparent"  speed="1" loop autoplay></lottie-player>}
+    {label && <lottie-player class="event_label" src={`/img/labels/${label}.json`}  background="transparent"  speed="1" loop autoplay playsinline></lottie-player>}
     <span class="event_date" style={{color: color}}>{date}</span>
     <div class="event_content">
         <span class="event_title" style={{color: color}}>{title}</span>

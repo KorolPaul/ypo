@@ -19,6 +19,9 @@
                     <img src="/img/arrow-outside-dark.svg" alt="" class="menu_link-icon">
                 </a>
             </nav>
+            <script>
+                document.querySelectorAll('.menu_link').forEach((link) => link.addEventListener('click', () => document.body.classList.remove('menu-opened')))
+            </script>
         </div>
         <button class="menu-toggle">
             <span class="menu-toggle_title">MENU</span>

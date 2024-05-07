@@ -6,15 +6,19 @@
     }
 
     &__small-indent {
-        padding: 24px 0 65px;
+        padding: 24px 0 0;
         @include desktop {
-            padding: 56px 0 110px;
+            padding: 56px 0 0;
         }
     }
 
     &_video-wrapper {
         border-radius: 16px;
         margin: 0 auto 76px;
+
+        .showcase__small-indent & {
+            margin-bottom: 0;
+        }
     }
 
     &_video {

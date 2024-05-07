@@ -5,7 +5,7 @@ import Ticker from "../../components/Ticker.astro";
 ---
 
 <Layout title="Family Flotilla Day">
-    <section class="section">
+    <section class="section section__small-indent">
         <div class="section_content">
             <div class="event-page">
                 <span class="event-page_label">Events</span>
@@ -26,13 +26,38 @@ import Ticker from "../../components/Ticker.astro";
 
             <div class="showcase showcase__small-indent">
                 <div class="showcase_video-wrapper">
-                    <video src="" class="showcase_video"></video>
+                    <video src="/img/main-video-mobile.mp4" data-src="/img/main-video.mp4" class="showcase_video" loop autoplay muted playsinline></video>
+
+                    <script>
+                        const videoWrapper = document.querySelector('.showcase_video-wrapper');
+
+                        if (videoWrapper) {
+                            videoWrapper.addEventListener('click', function(e) {
+                                if (!e.currentTarget.classList.contains('active')) {
+                                    e.currentTarget.classList.add('active');
+                                    e.currentTarget.querySelectorAll('video').forEach((video) => {
+                                        video.muted = false;
+                                        video.currentTime = 0;
+                                        video.controls = true;
+                                    });
+                                }
+                            });
+                        }
+
+                        const isMobile = window.innerWidth <= 768;
+                        
+                        videoWrapper?.querySelectorAll('video').forEach(video => {
+                            if (video.dataset.src && !isMobile) {
+                                video.setAttribute('src', video.dataset.src);
+                            }
+                        });
+                    </script>
                 </div>
             </div>
 
         </div>
-        <Ticker />
     </section>
+    <Ticker />
 
     <section class="section section__beige">
         <div class="section_content">

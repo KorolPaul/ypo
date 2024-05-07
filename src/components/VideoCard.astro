@@ -3,15 +3,65 @@ export interface Props {
     src: string;
     title: string;
     subtitle: string;
+    active?: boolean;
+    href: string;
 }
 
-const { src, title, subtitle } = Astro.props;
+const { src, title, subtitle, active, href } = Astro.props;
 ---
 
-<div class="video-card">
-    <video src={src} class="video-card_video" />
+<div class="video-card" data-active={active}>
+    {active ? (
+        <video src={src} class="video-card_video" playsinline autoplay muted loop />
+
+    ) : (
+        <video src={src} class="video-card_video" playsinline />
+    )}
     <div class="video-card_content">
         <span class="video-card_title">{title}</span>
         <span class="video-card_subtitle">{subtitle}</span>
+
+        <a class="video-card_link" href={href} target="_blank" rel="noopener noreferrer">
+            LinkedIn
+            <img class="video-card_link-icon" src="/img/arrow-outside.svg" alt="">
+        </a>
     </div>
 </div>
+
+<script>
+    const videoCardsElements = document.querySelectorAll('.video-card');
+    videoCardsElements.forEach(card => card.addEventListener('click', function(e) {
+        if (card.classList.contains('active')) {
+            card.classList.remove('active');
+            const video = card.querySelector('video');
+    
+            if (video) {
+                video.pause();
+            }
+            return;
+        }
+    
+        videoCardsElements.forEach(el => {
+            el.classList.remove('active');
+            el.removeAttribute('data-active');
+    
+            const video = el.querySelector('video');
+    
+            if (video) {
+                video.pause();
+            }
+        });
+    
+    
+        card.classList.add('active');
+        const video = card.querySelector('video');
+    
+        if (video) {
+            video.muted = false;
+            video.currentTime = 0;
+            video.play();
+        }
+    
+    }));
+    
+</script>

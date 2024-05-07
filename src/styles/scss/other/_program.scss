@@ -2,6 +2,10 @@
     max-width: 596px;
     margin: auto;
 
+    &_title {
+        margin-top: 0;
+    }
+
     &_description {
         font-size: 14px;
         font-weight: 500;
@@ -94,10 +98,14 @@
     }
 
     &_bottom {
-        padding: 56px 0 180px;
+        padding: 56px 0 0;
         @include tablet {
             padding-top: 66px;
             border-top: 1px solid $color;
+        }
+
+        h3 {
+            margin-top: 0;
         }
     }
 

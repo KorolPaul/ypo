@@ -59,12 +59,16 @@
 
         &:nth-child(1),
         &:nth-child(2) {
-            border-top: none;
+            @include tablet {
+                border-top: none;
+            }
         }
 
         &:nth-child(2),
         &:nth-child(4) {
-            border-left: 1px solid $color;
+            @include tablet {
+                border-left: 1px solid $color;
+            }
         }
     }
 
@@ -91,6 +95,8 @@
     }
 
     &_cell-data {
+        width: fit-content;
+        width: 50%;
         @include tablet {
             text-align: center;
         }
@@ -117,5 +123,9 @@
         @include tablet {
             font-size: 24px;
         }
+    }
+
+    &_cell-image {
+        width: 50%;
     }
 }

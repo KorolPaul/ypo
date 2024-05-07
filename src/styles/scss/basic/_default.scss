@@ -9,12 +9,9 @@ body {
     padding: 0;
     letter-spacing: -1px;
     scroll-behavior: smooth;
-    padding: 112px 0 0;
+    padding: 162px 0 0;
     @include tablet {
-        font-size: 48px;
-    }
-    @include desktop-large {
-        font-size: $font-size;
+        padding-top: 190px;
     }
 }
 
