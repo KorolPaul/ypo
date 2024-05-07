@@ -62,6 +62,8 @@ import Access from "~/components/Access.astro";
 
                         if (videoWrapper) {
                             videoWrapper.addEventListener('click', function(e) {
+                                e.currentTarget.classList.remove('active');
+
                                 if (!e.currentTarget.classList.contains('active')) {
                                     e.currentTarget.classList.add('active');
                                     e.currentTarget.querySelectorAll('video').forEach((video) => {

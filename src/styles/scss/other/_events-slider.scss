@@ -21,7 +21,7 @@
     }
 
     .swiper-slide {
-        @include desktop {
+        @include tablet {
             width: 822px !important;
         }
     }

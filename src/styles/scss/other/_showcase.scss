@@ -15,9 +15,28 @@
     &_video-wrapper {
         border-radius: 16px;
         margin: 0 auto 76px;
+        position: relative;
 
         .showcase__small-indent & {
             margin-bottom: 0;
+        }
+
+        &::after {
+            content: '';
+            background: url(#{$img}/play.svg) no-repeat center / 100%;
+            width: 126px;
+            height: 48px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            pointer-events: none;
+            transition: .2s $easingSmooth opacity;
+        }
+
+        &.active::after {
+            opacity: 0;
         }
     }
 

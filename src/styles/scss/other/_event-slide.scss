@@ -4,8 +4,7 @@
     position: relative;
     color: $color;
     text-decoration: none;
-    width: 394px;
-    @include desktop {
+    @include tablet {
         width: 822px;
     }
 
@@ -64,13 +63,14 @@
     &_label {
         position: absolute;
         height: 60px;
-        left: -194px;
-        top: 88px;
+        width: auto;
+        left: -14px;
+        top: 128px;
         z-index: 2;
-        @include desktop {
+        @include tablet {
             height: 94px;
-            left: -345px;
-            top: 200px;
+            left: -25px;
+            top: 300px;
         }
     }
 

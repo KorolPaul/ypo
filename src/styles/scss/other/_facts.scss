@@ -8,9 +8,9 @@
 
     &_button {
         text-align: center;
-        padding: 80px 0 30px;
+        padding: 80px 0 0;
         @include desktop {
-            padding: 60px 0 200px;
+            padding: 60px 0 0;
         }
     }
 }
